@@ -1,9 +1,7 @@
 ﻿import math
 
-
 def GetVariableIndex(row, col, boardSize):
     return row * boardSize + col + 1
-
 
 def AmoPairwise(literals):
     clauses = []
@@ -12,7 +10,6 @@ def AmoPairwise(literals):
         for j in range(i + 1, litsCount):
             clauses.append([-literals[i], -literals[j]])
     return clauses
-
 
 def AmoBinary(literals, nextVarTracker=None):
     n = len(literals)
@@ -40,7 +37,6 @@ def AmoBinary(literals, nextVarTracker=None):
                 clauses.append([-lit, -bitVars[j]])
 
     return clauses
-
 
 def EncodeNQueens(boardSize):
     clauses = []

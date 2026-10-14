@@ -1,6 +1,4 @@
 ﻿import math
-
-
 def GetVariableIndex(row, col, boardSize):
     return row * boardSize + col + 1
 
